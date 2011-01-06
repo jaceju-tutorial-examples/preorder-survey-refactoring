@@ -3,6 +3,7 @@ class IndexController extends Zend_Controller_Action
 {
     protected $_decorationDisplayNameList = array(
         'kitchen' => '廚房',
+        'bathroom' => '浴室',
     );
 
     public function indexAction()
@@ -82,6 +83,34 @@ class IndexController extends Zend_Controller_Action
         if (!array_key_exists('kitchenQuestion05', $formData)) {
             $error = true;
             $messenger->addMessage('請選擇現有廚具');
+        }
+    }
+
+    protected function _checkBathroomFormData($formData, &$error, Zend_Controller_Action_Helper_FlashMessenger &$messenger)
+    {
+        if (0 === strlen($formData['name'])) {
+            $error = true;
+            $messenger->addMessage('請輸入姓名');
+        }
+        if (0 === strlen($formData['phone'])) {
+            $error = true;
+            $messenger->addMessage('請輸入電話');
+        }
+        if (0 === strlen($formData['address'])) {
+            $error = true;
+            $messenger->addMessage('請輸入地址');
+        }
+        if (!array_key_exists('bathroomQuestion01', $formData)) {
+            $error = true;
+            $messenger->addMessage('請選擇坪數');
+        }
+        if (!array_key_exists('bathroomQuestion02', $formData)) {
+            $error = true;
+            $messenger->addMessage('請選擇馬桶');
+        }
+        if (!array_key_exists('bathroomQuestion03', $formData)) {
+            $error = true;
+            $messenger->addMessage('請選擇面盆');
         }
     }
 

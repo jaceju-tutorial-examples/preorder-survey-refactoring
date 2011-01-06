@@ -16,3 +16,17 @@ CREATE TABLE IF NOT EXISTS `decoration_kitchens` (
   `kitchenQuestion05` enum('1','2','3','4','5') default NULL,
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='廚房問卷';
+
+DROP TABLE IF EXISTS `decoration_bathrooms`;
+CREATE TABLE IF NOT EXISTS `decoration_bathrooms` (
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `name` varchar(100) default NULL,
+  `phone` varchar(100) default NULL,
+  `address` varchar(200) default NULL,
+  `bathroomQuestion01` enum('1','2','3','4') default NULL,
+  `bathroomQuestion02` enum('1','2','3','4') default NULL,
+  `bathroomQuestion03` enum('1','2','3','4','5') default NULL,
+  `bathroomQuestion04` enum('y','n') default 'n',
+  `bathroomQuestion05` enum('y','n') default 'n',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='衛浴問卷';
