@@ -1,0 +1,21 @@
+<h1><?php echo $this->escape($this->decorationDisplayName); ?></h1>
+<form action="" method="post">
+    <fieldset>
+        <legend>連絡資訊</legend>
+        <p><label for="name">姓名</label><input type="text" name="name" id="name" /></p>
+        <p><label for="phone">電話</label><input type="text" name="phone" id="phone" /></p>
+        <p><label for="address">住址</label><input type="text" name="address" id="address" /></p>
+    </fieldset>
+    <fieldset>
+        <legend>裝修選項</legend>
+        <?php echo $this->partial('index/' . $this->decorationName . '/form.phtml'); ?>
+    </fieldset>
+    <p><button type="submit">完成送出</button></p>
+    <?php if (!empty($this->messages)) : ?>
+    <ul>
+    <?php foreach ($this->messages as $message) : ?>
+        <li><?php echo $this->escape($message); ?></li>
+    <?php endforeach; ?>
+    </ul>
+    <?php endif; ?>
+</form>

@@ -1,0 +1,32 @@
+<dl>
+    <dt>裝修內容：</dt>
+    <dd>
+        <p>
+            <?php echo $this->actionController->buildOptionString(
+                    $this->decorationMap['kitchenQuestion01'],
+                    $this->decorationRow['kitchenQuestion01']); ?>
+            <?php echo $this->actionController->buildOptionString(
+                    $this->decorationMap['kitchenQuestion02'],
+                    $this->decorationRow['kitchenQuestion02']); ?>
+        </p>
+    </dd>
+    <dt>設備是否保留：</dt>
+    <dd>
+        <p>
+            <?php echo $this->actionController->buildOptionString(
+                    $this->decorationMap['kitchenQuestion03'],
+                    $this->decorationRow['kitchenQuestion03']); ?>
+            <?php echo $this->actionController->buildOptionString(
+                    $this->decorationMap['kitchenQuestion04'],
+                    $this->decorationRow['kitchenQuestion04']); ?>
+        </p>
+    </dd>
+    <dt>現有廚具：</dt>
+    <dd>
+        <p>
+            <?php echo $this->actionController->buildOptionString(
+                    $this->decorationMap['kitchenQuestion05'],
+                    $this->decorationRow['kitchenQuestion05']); ?>
+        </p>
+    </dd>
+</dl>

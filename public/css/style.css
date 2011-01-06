@@ -1,0 +1,23 @@
+#wrapper {
+width:600px;
+margin:0 auto;
+}
+
+form p {
+clear:both;
+}
+
+form label {
+float:left;
+width:75px;
+padding-right:5px;
+text-align:right;
+}
+
+form dl label {
+float:none;
+width:auto;
+margin-left:10px;
+padding-right:5px;
+text-align:left;
+}

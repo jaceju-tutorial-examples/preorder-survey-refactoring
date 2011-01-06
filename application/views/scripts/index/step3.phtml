@@ -1,0 +1,9 @@
+<h1><?php echo $this->escape($this->decorationDisplayName); ?></h1>
+<h2>連絡資訊</h2>
+<ul>
+    <li>姓名： <?php echo $this->escape($this->decorationRow->name); ?></li>
+    <li>電話： <?php echo $this->escape($this->decorationRow->phone); ?></li>
+    <li>住址： <?php echo $this->escape($this->decorationRow->address); ?></li>
+</ul>
+<h2>裝修選項</h2>
+<?php echo $this->partial('index/' . $this->decorationName . '/ok.phtml', null, $this); ?>
